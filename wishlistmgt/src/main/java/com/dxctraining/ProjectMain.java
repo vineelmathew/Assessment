@@ -10,13 +10,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-
-/**
- * @SpringBootapplication equivalent to 3 things
- * 1)@Configuration : so we dont have to provide on our own
- * 2)@ComponentScan: so we dont have to provide on our own
- * 3) @AutoConfiguration so we dont have to provide on our own
- */
 @SpringBootApplication
 
 @EnableDiscoveryClient

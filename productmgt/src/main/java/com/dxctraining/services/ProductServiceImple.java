@@ -30,6 +30,14 @@ public class ProductServiceImple implements IProductService{
         }
     }
 
+    private void validate(String id)
+    {
+        if(id==null || id.isEmpty())
+        {
+            throw new InvalidArgumentException("ID can't be null or empty");
+        }
+    }
+
 
     @Override
     public void remove(String id) {
@@ -38,6 +46,7 @@ public class ProductServiceImple implements IProductService{
 
     @Override
     public Product findById(String id) {
+        validate(id);
         Optional<Product>product=productDao.findById(id);
         if(!product.isPresent())
         {
@@ -49,6 +58,7 @@ public class ProductServiceImple implements IProductService{
 
     @Override
     public Product productByName(String name) {
+     validate(name);
      Product products=productDao.findByName(name);
      return products;
     }
