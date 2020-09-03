@@ -4,6 +4,8 @@ public class WishListDto {
     private String id;
     private String productId;
     private Integer customerId;
+    private String customerName;
+    private String productName;
 
     public WishListDto(String id, String productId, Integer customerId) {
         this.id = id;
@@ -37,5 +39,21 @@ public class WishListDto {
 
     public void setCustomerId(Integer customerId) {
         this.customerId = customerId;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

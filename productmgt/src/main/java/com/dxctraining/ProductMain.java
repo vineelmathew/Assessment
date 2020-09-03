@@ -9,6 +9,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableMongoRepositories
@@ -27,6 +28,12 @@ public class ProductMain {
 		MongoTemplate template=new MongoTemplate(client,databaseName);
 		return template;
 	}
+	@Bean
+	public RestTemplate restTemplate(){
+		return new RestTemplate();
+	}
+
+
 
 
 }

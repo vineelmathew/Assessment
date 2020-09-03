@@ -6,6 +6,7 @@ import com.dxctraining.entities.Product;
 import com.dxctraining.services.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/products")
@@ -13,6 +14,10 @@ public class ProductController {
 
     @Autowired
     private IProductService productService;
+
+
+    @Autowired
+    private RestTemplate restTemplate;
 
 
     @PostMapping("/add")
