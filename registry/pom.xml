@@ -6,7 +6,7 @@
 	<groupId>com.dxctraining</groupId>
 	<artifactId>registry</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>discovery-server</name>
 	<description>Micro discovery service in which our services will be registered</description>

@@ -58,7 +58,7 @@ public class WishListController {
         return dto;
     }
     @GetMapping("get/{id}")
-    public List<WishListDto> WishlistByCustomerId(@PathVariable("id") Integer customerId)
+    public List<WishListDto> wishlistByCustomerId(@PathVariable("id") Integer customerId)
     {
         List<WishList>wishLists=wishListService.fetchAll(customerId);
         List<WishListDto>result=new ArrayList<>();
